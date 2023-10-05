@@ -1,0 +1,1143 @@
+[0m[1mmodule.RDS-global.data.terraform_remote_state.site: Reading...[0m[0m
+[0m[1mmodule.vpc.aws_internet_gateway.vpc: Refreshing state... [id=igw-045ea3767b6f6b136][0m
+[0m[1mmodule.vpc.aws_eip.nat_eip: Refreshing state... [id=eipalloc-0cc141be37bab1b74][0m
+[0m[1mmodule.vpc.aws_route.public_internet_gateway: Refreshing state... [id=r-rtb-0c24f305fe5a293fe1080289494][0m
+[0m[1mmodule.vpc.aws_key_pair.admin_key: Refreshing state... [id=workshop-production][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0bee5348fe39e72b6][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0d578c73213c59097][0m
+[0m[1mmodule.vpc.aws_vpc.vpc: Refreshing state... [id=vpc-0256b8fc0b4201e04][0m
+[0m[1mmodule.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-03a783de1d21635c6][0m
+[0m[1mmodule.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0723bace7afbc179f][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0e2da673e535766c4][0m
+[0m[1mmodule.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-01b0e5a3a749dd54f][0m
+[0m[1mmodule.vpc.aws_nat_gateway.gw: Refreshing state... [id=nat-0d11b6e4a7f6e7d19][0m
+[0m[1mmodule.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-08cf4046c8844fa9a][0m
+[0m[1mmodule.vpc.aws_route_table.private: Refreshing state... [id=rtb-0e7f4d3c65b2a7004][0m
+[0m[1mmodule.vpc.aws_route.nat_gateway: Refreshing state... [id=r-rtb-0e7f4d3c65b2a70041080289494][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0ee31d436902dc090][0m
+[0m[1mmodule.RDS-global.data.terraform_remote_state.site: Read complete after 2s[0m
+[0m[1mmodule.vpc.aws_route_table.public: Refreshing state... [id=rtb-0c24f305fe5a293fe][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+  [31m-[0m destroy[0m
+ [36m<=[0m read (data resources)[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.RDS-global.aws_db_instance.rds-db[0m will be created
+[0m  [32m+[0m[0m resource "aws_db_instance" "rds-db" {
+      [32m+[0m[0m address                               = (known after apply)
+      [32m+[0m[0m allocated_storage                     = 20
+      [32m+[0m[0m apply_immediately                     = true
+      [32m+[0m[0m arn                                   = (known after apply)
+      [32m+[0m[0m auto_minor_version_upgrade            = true
+      [32m+[0m[0m availability_zone                     = "us-east-1a"
+      [32m+[0m[0m backup_retention_period               = (known after apply)
+      [32m+[0m[0m backup_window                         = (known after apply)
+      [32m+[0m[0m ca_cert_identifier                    = (known after apply)
+      [32m+[0m[0m character_set_name                    = (known after apply)
+      [32m+[0m[0m copy_tags_to_snapshot                 = false
+      [32m+[0m[0m db_name                               = (known after apply)
+      [32m+[0m[0m db_subnet_group_name                  = "rds-db-default-group"
+      [32m+[0m[0m delete_automated_backups              = true
+      [32m+[0m[0m endpoint                              = (known after apply)
+      [32m+[0m[0m engine                                = "mysql"
+      [32m+[0m[0m engine_version                        = "5.7.26"
+      [32m+[0m[0m engine_version_actual                 = (known after apply)
+      [32m+[0m[0m hosted_zone_id                        = (known after apply)
+      [32m+[0m[0m id                                    = (known after apply)
+      [32m+[0m[0m identifier                            = "workshop-app-db"
+      [32m+[0m[0m identifier_prefix                     = (known after apply)
+      [32m+[0m[0m instance_class                        = "db.t2.micro"
+      [32m+[0m[0m iops                                  = (known after apply)
+      [32m+[0m[0m kms_key_id                            = (known after apply)
+      [32m+[0m[0m latest_restorable_time                = (known after apply)
+      [32m+[0m[0m license_model                         = (known after apply)
+      [32m+[0m[0m listener_endpoint                     = (known after apply)
+      [32m+[0m[0m maintenance_window                    = (known after apply)
+      [32m+[0m[0m master_user_secret                    = (known after apply)
+      [32m+[0m[0m master_user_secret_kms_key_id         = (known after apply)
+      [32m+[0m[0m monitoring_interval                   = 0
+      [32m+[0m[0m monitoring_role_arn                   = (known after apply)
+      [32m+[0m[0m multi_az                              = false
+      [32m+[0m[0m name                                  = (known after apply)
+      [32m+[0m[0m nchar_character_set_name              = (known after apply)
+      [32m+[0m[0m network_type                          = (known after apply)
+      [32m+[0m[0m option_group_name                     = (known after apply)
+      [32m+[0m[0m parameter_group_name                  = "default.mysql5.7"
+      [32m+[0m[0m password                              = (sensitive value)
+      [32m+[0m[0m performance_insights_enabled          = false
+      [32m+[0m[0m performance_insights_kms_key_id       = (known after apply)
+      [32m+[0m[0m performance_insights_retention_period = (known after apply)
+      [32m+[0m[0m port                                  = (known after apply)
+      [32m+[0m[0m publicly_accessible                   = true
+      [32m+[0m[0m replica_mode                          = (known after apply)
+      [32m+[0m[0m replicas                              = (known after apply)
+      [32m+[0m[0m resource_id                           = (known after apply)
+      [32m+[0m[0m skip_final_snapshot                   = true
+      [32m+[0m[0m snapshot_identifier                   = (known after apply)
+      [32m+[0m[0m status                                = (known after apply)
+      [32m+[0m[0m storage_throughput                    = (known after apply)
+      [32m+[0m[0m storage_type                          = "standard"
+      [32m+[0m[0m tags_all                              = (known after apply)
+      [32m+[0m[0m timezone                              = (known after apply)
+      [32m+[0m[0m username                              = "admin"
+      [32m+[0m[0m vpc_security_group_ids                = (known after apply)
+    }
+
+[1m  # module.RDS-global.aws_db_subnet_group.rds-db-default-group[0m will be created
+[0m  [32m+[0m[0m resource "aws_db_subnet_group" "rds-db-default-group" {
+      [32m+[0m[0m arn                     = (known after apply)
+      [32m+[0m[0m description             = "Managed by Terraform"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m name                    = "rds-db-default-group"
+      [32m+[0m[0m name_prefix             = (known after apply)
+      [32m+[0m[0m subnet_ids              = [
+          [32m+[0m[0m "subnet-01b0e5a3a749dd54f",
+          [32m+[0m[0m "subnet-03a783de1d21635c6",
+          [32m+[0m[0m "subnet-0723bace7afbc179f",
+          [32m+[0m[0m "subnet-08cf4046c8844fa9a",
+        ]
+      [32m+[0m[0m supported_network_types = (known after apply)
+      [32m+[0m[0m tags                    = {
+          [32m+[0m[0m "Name"   = "My DB subnet group"
+          [32m+[0m[0m "Source" = "Terraform"
+        }
+      [32m+[0m[0m tags_all                = {
+          [32m+[0m[0m "Name"   = "My DB subnet group"
+          [32m+[0m[0m "Source" = "Terraform"
+        }
+      [32m+[0m[0m vpc_id                  = (known after apply)
+    }
+
+[1m  # module.RDS-global.aws_security_group.rds-mysql-db[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "rds-mysql-db" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for workshop rds"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "10.11.0.0/16",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "10.11.0.0/16",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 3306
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = true
+              [32m+[0m[0m to_port          = 3306
+            },
+        ]
+      [32m+[0m[0m name                   = "workshop_rds_sg"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = "vpc-0256b8fc0b4201e04"
+    }
+
+[1m  # module.app-server.data.terraform_remote_state.site[0m will be read during apply
+  # (depends on a resource or a module with changes pending)
+[0m [36m<=[0m[0m data "terraform_remote_state" "site" {
+      [32m+[0m[0m backend = "s3"
+      [32m+[0m[0m config  = {
+          [32m+[0m[0m bucket = "hananel-cloudschool"
+          [32m+[0m[0m key    = "terraform-app/terraform.tfstate"
+          [32m+[0m[0m region = "us-east-1"
+        }
+      [32m+[0m[0m outputs = (known after apply)
+    }
+
+[1m  # module.app-server.aws_autoscaling_group.workshop-app_asg[0m will be created
+[0m  [32m+[0m[0m resource "aws_autoscaling_group" "workshop-app_asg" {
+      [32m+[0m[0m arn                       = (known after apply)
+      [32m+[0m[0m availability_zones        = (known after apply)
+      [32m+[0m[0m default_cooldown          = (known after apply)
+      [32m+[0m[0m desired_capacity          = 1
+      [32m+[0m[0m force_delete              = false
+      [32m+[0m[0m force_delete_warm_pool    = false
+      [32m+[0m[0m health_check_grace_period = 300
+      [32m+[0m[0m health_check_type         = (known after apply)
+      [32m+[0m[0m id                        = (known after apply)
+      [32m+[0m[0m launch_configuration      = (known after apply)
+      [32m+[0m[0m load_balancers            = [
+          [32m+[0m[0m "workshop-terraform-lb",
+        ]
+      [32m+[0m[0m max_size                  = 5
+      [32m+[0m[0m metrics_granularity       = "1Minute"
+      [32m+[0m[0m min_size                  = 1
+      [32m+[0m[0m name                      = "workshop-terraform_asg"
+      [32m+[0m[0m name_prefix               = (known after apply)
+      [32m+[0m[0m predicted_capacity        = (known after apply)
+      [32m+[0m[0m protect_from_scale_in     = false
+      [32m+[0m[0m service_linked_role_arn   = (known after apply)
+      [32m+[0m[0m vpc_zone_identifier       = (known after apply)
+      [32m+[0m[0m wait_for_capacity_timeout = "10m"
+      [32m+[0m[0m warm_pool_size            = (known after apply)
+
+      [32m+[0m[0m tag {
+          [32m+[0m[0m key                 = "Name"
+          [32m+[0m[0m propagate_at_launch = true
+          [32m+[0m[0m value               = "workshop-terraform"
+        }
+      [32m+[0m[0m tag {
+          [32m+[0m[0m key                 = "Team"
+          [32m+[0m[0m propagate_at_launch = true
+          [32m+[0m[0m value               = "Workshop"
+        }
+    }
+
+[1m  # module.app-server.aws_elb.workshop-app[0m will be created
+[0m  [32m+[0m[0m resource "aws_elb" "workshop-app" {
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m availability_zones          = (known after apply)
+      [32m+[0m[0m connection_draining         = true
+      [32m+[0m[0m connection_draining_timeout = 400
+      [32m+[0m[0m cross_zone_load_balancing   = true
+      [32m+[0m[0m desync_mitigation_mode      = "defensive"
+      [32m+[0m[0m dns_name                    = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m idle_timeout                = 400
+      [32m+[0m[0m instances                   = (known after apply)
+      [32m+[0m[0m internal                    = (known after apply)
+      [32m+[0m[0m name                        = "workshop-terraform-lb"
+      [32m+[0m[0m security_groups             = (known after apply)
+      [32m+[0m[0m source_security_group       = (known after apply)
+      [32m+[0m[0m source_security_group_id    = (known after apply)
+      [32m+[0m[0m subnets                     = (known after apply)
+      [32m+[0m[0m tags_all                    = (known after apply)
+      [32m+[0m[0m zone_id                     = (known after apply)
+
+      [32m+[0m[0m health_check {
+          [32m+[0m[0m healthy_threshold   = 2
+          [32m+[0m[0m interval            = 30
+          [32m+[0m[0m target              = "HTTP:8080/checkhealth"
+          [32m+[0m[0m timeout             = 3
+          [32m+[0m[0m unhealthy_threshold = 2
+        }
+
+      [32m+[0m[0m listener {
+          [32m+[0m[0m instance_port     = 8080
+          [32m+[0m[0m instance_protocol = "HTTP"
+          [32m+[0m[0m lb_port           = 80
+          [32m+[0m[0m lb_protocol       = "HTTP"
+        }
+    }
+
+[1m  # module.app-server.aws_launch_configuration.workshop-app_lc[0m will be created
+[0m  [32m+[0m[0m resource "aws_launch_configuration" "workshop-app_lc" {
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m associate_public_ip_address = (known after apply)
+      [32m+[0m[0m ebs_optimized               = (known after apply)
+      [32m+[0m[0m enable_monitoring           = false
+      [32m+[0m[0m iam_instance_profile        = "cloudwatch_s3_profile"
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m image_id                    = "ami-0a8e758f5e873d1c1"
+      [32m+[0m[0m instance_type               = "t2.micro"
+      [32m+[0m[0m key_name                    = (known after apply)
+      [32m+[0m[0m name                        = (known after apply)
+      [32m+[0m[0m name_prefix                 = "workshop-terraform_lc"
+      [32m+[0m[0m security_groups             = (known after apply)
+      [32m+[0m[0m user_data                   = (known after apply)
+    }
+
+[1m  # module.app-server.aws_security_group.workshop-app[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "workshop-app" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for workshop-terraform workshop app"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = []
+              [32m+[0m[0m description      = "http"
+              [32m+[0m[0m from_port        = 8080
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = true
+              [32m+[0m[0m to_port          = 8080
+            },
+        ]
+      [32m+[0m[0m name                   = "workshop-terraform_workshop_app"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.app-server.aws_security_group.workshop-app_lb[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "workshop-app_lb" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "workshop-terraform-lb"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "http"
+              [32m+[0m[0m from_port        = 80
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 80
+            },
+        ]
+      [32m+[0m[0m name                   = "workshop-terraform-lb"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.jenkins-server.data.terraform_remote_state.site[0m will be read during apply
+  # (depends on a resource or a module with changes pending)
+[0m [36m<=[0m[0m data "terraform_remote_state" "site" {
+      [32m+[0m[0m backend = "s3"
+      [32m+[0m[0m config  = {
+          [32m+[0m[0m bucket = "hananel-cloudschool"
+          [32m+[0m[0m key    = "terraform-app/terraform.tfstate"
+          [32m+[0m[0m region = "us-east-1"
+        }
+      [32m+[0m[0m outputs = (known after apply)
+    }
+
+[1m  # module.jenkins-server.aws_instance.jenkins-server[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "jenkins-server" {
+      [32m+[0m[0m ami                                  = "ami-0a8e758f5e873d1c1"
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = (known after apply)
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m cpu_core_count                       = (known after apply)
+      [32m+[0m[0m cpu_threads_per_core                 = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = "cloudwatch_s3_profile"
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t2.micro"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = (known after apply)
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m subnet_id                            = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name"   = "Jenkins-server"
+          [32m+[0m[0m "Source" = "Terraform"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name"   = "Jenkins-server"
+          [32m+[0m[0m "Source" = "Terraform"
+        }
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = false
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
+    }
+
+[1m  # module.jenkins-server.aws_security_group.jenkins-server[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "jenkins-server" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for jenkins-server jenkins service"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "jenkins in docker"
+              [32m+[0m[0m from_port        = 50003
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 50003
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "jenkins in docker"
+              [32m+[0m[0m from_port        = 8083
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 8083
+            },
+        ]
+      [32m+[0m[0m name                   = "jenkins-server_services_jenkins"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.main-server.data.terraform_remote_state.site[0m will be read during apply
+  # (depends on a resource or a module with changes pending)
+[0m [36m<=[0m[0m data "terraform_remote_state" "site" {
+      [32m+[0m[0m backend = "s3"
+      [32m+[0m[0m config  = {
+          [32m+[0m[0m bucket = "hananel-cloudschool"
+          [32m+[0m[0m key    = "terraform-app/terraform.tfstate"
+          [32m+[0m[0m region = "us-east-1"
+        }
+      [32m+[0m[0m outputs = (known after apply)
+    }
+
+[1m  # module.main-server.aws_iam_instance_profile.cloudwatch_s3_profile[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_instance_profile" "cloudwatch_s3_profile" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m create_date = (known after apply)
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "cloudwatch_s3_profile"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m role        = "assume_role"
+      [32m+[0m[0m tags_all    = (known after apply)
+      [32m+[0m[0m unique_id   = (known after apply)
+    }
+
+[1m  # module.main-server.aws_iam_role.assume_role[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "assume_role" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "ec2.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "assume_role"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m role_last_used        = (known after apply)
+      [32m+[0m[0m tags                  = {
+          [32m+[0m[0m "Name" = "assume_role"
+        }
+      [32m+[0m[0m tags_all              = {
+          [32m+[0m[0m "Name" = "assume_role"
+        }
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # module.main-server.aws_iam_role_policy.cloudwatch_s3_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy" "cloudwatch_s3_policy" {
+      [32m+[0m[0m id     = (known after apply)
+      [32m+[0m[0m name   = "cloudwatch_s3_policy"
+      [32m+[0m[0m policy = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = [
+                          [32m+[0m[0m "s3:*",
+                          [32m+[0m[0m "cloudwatch:*",
+                          [32m+[0m[0m "logs:*",
+                        ]
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = "*"
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m role   = (known after apply)
+    }
+
+[1m  # module.main-server.aws_instance.main-server_lc[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "main-server_lc" {
+      [32m+[0m[0m ami                                  = "ami-0a8e758f5e873d1c1"
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = (known after apply)
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m cpu_core_count                       = (known after apply)
+      [32m+[0m[0m cpu_threads_per_core                 = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = "cloudwatch_s3_profile"
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t2.micro"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = (known after apply)
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m subnet_id                            = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name"   = "Main-server"
+          [32m+[0m[0m "Source" = "Terraform"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name"   = "Main-server"
+          [32m+[0m[0m "Source" = "Terraform"
+        }
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = false
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
+    }
+
+[1m  # module.main-server.aws_security_group.main-instance-ssh[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "main-instance-ssh" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for main-server ssh service"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "ssh"
+              [32m+[0m[0m from_port        = 22
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 22
+            },
+        ]
+      [32m+[0m[0m name                   = "main-server_ssh"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.main-server.aws_security_group.main-instance_consul[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "main-instance_consul" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for main-server consul service"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "consul-debug"
+              [32m+[0m[0m from_port        = 8500
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 8500
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = []
+              [32m+[0m[0m description      = "consul"
+              [32m+[0m[0m from_port        = 8500
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = true
+              [32m+[0m[0m to_port          = 8500
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = []
+              [32m+[0m[0m description      = "consul"
+              [32m+[0m[0m from_port        = 8600
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = true
+              [32m+[0m[0m to_port          = 8600
+            },
+        ]
+      [32m+[0m[0m name                   = "main-server_services_consul"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.main-server.aws_security_group.main-instance_grafana[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "main-instance_grafana" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for main-server grafana service"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "grafana"
+              [32m+[0m[0m from_port        = 3000
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 3000
+            },
+        ]
+      [32m+[0m[0m name                   = "main-server_services_grafana"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.main-server.aws_security_group.main-instance_vault[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "main-instance_vault" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "sg for main-server vault service"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = ""
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "vault-debug"
+              [32m+[0m[0m from_port        = 8200
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 8200
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = []
+              [32m+[0m[0m description      = "vault"
+              [32m+[0m[0m from_port        = 8200
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = true
+              [32m+[0m[0m to_port          = 8200
+            },
+        ]
+      [32m+[0m[0m name                   = "main-server_services_vault"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.vpc.aws_eip.nat_eip[0m will be [1m[31mdestroyed[0m
+  # (because aws_eip.nat_eip is not in configuration)
+[0m  [31m-[0m[0m resource "aws_eip" "nat_eip" {
+      [31m-[0m[0m allocation_id        = "eipalloc-0cc141be37bab1b74" [90m-> null[0m[0m
+      [31m-[0m[0m association_id       = "eipassoc-04447aaa30f46f26c" [90m-> null[0m[0m
+      [31m-[0m[0m domain               = "vpc" [90m-> null[0m[0m
+      [31m-[0m[0m id                   = "eipalloc-0cc141be37bab1b74" [90m-> null[0m[0m
+      [31m-[0m[0m network_border_group = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface    = "eni-0d05c7a252c907fd1" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns          = "ip-10-11-46-28.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip           = "10.11.46.28" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns           = "ec2-34-202-134-86.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip            = "34.202.134.86" [90m-> null[0m[0m
+      [31m-[0m[0m public_ipv4_pool     = "amazon" [90m-> null[0m[0m
+      [31m-[0m[0m tags                 = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all             = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc                  = true [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_internet_gateway.vpc[0m will be [1m[31mdestroyed[0m
+  # (because aws_internet_gateway.vpc is not in configuration)
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "vpc" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:341146379129:internet-gateway/igw-045ea3767b6f6b136" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-045ea3767b6f6b136" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_key_pair.admin_key[0m will be [1m[31mdestroyed[0m
+  # (because aws_key_pair.admin_key is not in configuration)
+[0m  [31m-[0m[0m resource "aws_key_pair" "admin_key" {
+      [31m-[0m[0m arn         = "arn:aws:ec2:us-east-1:341146379129:key-pair/workshop-production" [90m-> null[0m[0m
+      [31m-[0m[0m fingerprint = "a9:ef:6d:8e:fd:b0:8a:55:33:3c:16:31:16:22:e0:d1" [90m-> null[0m[0m
+      [31m-[0m[0m id          = "workshop-production" [90m-> null[0m[0m
+      [31m-[0m[0m key_name    = "workshop-production" [90m-> null[0m[0m
+      [31m-[0m[0m key_pair_id = "key-012c312f441118fca" [90m-> null[0m[0m
+      [31m-[0m[0m key_type    = "rsa" [90m-> null[0m[0m
+      [31m-[0m[0m public_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCsz6vKVI+3eum+rLtPh+aLoGkWB7979mNy4NWpEtWkvcmPiIglqrCPoyDJBARAm5YXTJOKVaoF6odfWuWJaB8jAYL4s9tfbQfMOio9+fX/A9+cnX2lJZwh6wZwx9cegD9waw6nQ31zRZQBEcQ/Sqfp54gi6XhT1nn+1So1RfIsHDk8xxmcRYT4SNvKJ7b1zTcr4SmMQf8ILJqNLFin7tYGpQsipJBYmFJ9jQ4GjQbAA7WpzPIavRopp6rMviTeQLAli87UjE/w2jCsOOCseZwFtE6eIQ7i5JQfd029rAQiAwBTzs+gnhrrsNLJ0b/XVaJcamdyWjYVzE9DQXPJdCqGKodajzUXB5veFdECpCcpKPqyqocObTeOOWzdrGfboCzRTp855cEHnMeyxS+DRW5wAjaEEDmt/w3jOcsAosN2j3ZfX+vYeKEWPO8yR+RRFw4twX7OThCIx5WwTOY6lY8kboc7/WDU3gJv/2AwZvN0jDs3NMTkzs/0XCdsD8FHG/8= han99@HAN-PC" [90m-> null[0m[0m
+      [31m-[0m[0m tags        = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all    = {} [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_nat_gateway.gw[0m will be [1m[31mdestroyed[0m
+  # (because aws_nat_gateway.gw is not in configuration)
+[0m  [31m-[0m[0m resource "aws_nat_gateway" "gw" {
+      [31m-[0m[0m allocation_id        = "eipalloc-0cc141be37bab1b74" [90m-> null[0m[0m
+      [31m-[0m[0m association_id       = "eipassoc-04447aaa30f46f26c" [90m-> null[0m[0m
+      [31m-[0m[0m connectivity_type    = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id                   = "nat-0d11b6e4a7f6e7d19" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface_id = "eni-0d05c7a252c907fd1" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip           = "10.11.46.28" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip            = "34.202.134.86" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id            = "subnet-0723bace7afbc179f" [90m-> null[0m[0m
+      [31m-[0m[0m tags                 = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all             = {} [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route.nat_gateway[0m will be [1m[31mdestroyed[0m
+  # (because aws_route.nat_gateway is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route" "nat_gateway" {
+      [31m-[0m[0m destination_cidr_block = "0.0.0.0/0" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "r-rtb-0e7f4d3c65b2a70041080289494" [90m-> null[0m[0m
+      [31m-[0m[0m nat_gateway_id         = "nat-0d11b6e4a7f6e7d19" [90m-> null[0m[0m
+      [31m-[0m[0m origin                 = "CreateRoute" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id         = "rtb-0e7f4d3c65b2a7004" [90m-> null[0m[0m
+      [31m-[0m[0m state                  = "active" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route.public_internet_gateway[0m will be [1m[31mdestroyed[0m
+  # (because aws_route.public_internet_gateway is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route" "public_internet_gateway" {
+      [31m-[0m[0m destination_cidr_block = "0.0.0.0/0" [90m-> null[0m[0m
+      [31m-[0m[0m gateway_id             = "igw-045ea3767b6f6b136" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "r-rtb-0c24f305fe5a293fe1080289494" [90m-> null[0m[0m
+      [31m-[0m[0m origin                 = "CreateRoute" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id         = "rtb-0c24f305fe5a293fe" [90m-> null[0m[0m
+      [31m-[0m[0m state                  = "active" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table.private[0m will be [1m[31mdestroyed[0m
+  # (because aws_route_table.private is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route_table" "private" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:341146379129:route-table/rtb-0e7f4d3c65b2a7004" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-0e7f4d3c65b2a7004" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m carrier_gateway_id         = ""
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m core_network_arn           = ""
+              [31m-[0m[0m destination_prefix_list_id = ""
+              [31m-[0m[0m egress_only_gateway_id     = ""
+              [31m-[0m[0m gateway_id                 = ""
+              [31m-[0m[0m instance_id                = ""
+              [31m-[0m[0m ipv6_cidr_block            = ""
+              [31m-[0m[0m local_gateway_id           = ""
+              [31m-[0m[0m nat_gateway_id             = "nat-0d11b6e4a7f6e7d19"
+              [31m-[0m[0m network_interface_id       = ""
+              [31m-[0m[0m transit_gateway_id         = ""
+              [31m-[0m[0m vpc_endpoint_id            = ""
+              [31m-[0m[0m vpc_peering_connection_id  = ""
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Name" = "$route-private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Name" = "$route-private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table.public[0m will be [1m[31mdestroyed[0m
+  # (because aws_route_table.public is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route_table" "public" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:341146379129:route-table/rtb-0c24f305fe5a293fe" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-0c24f305fe5a293fe" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m carrier_gateway_id         = ""
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m core_network_arn           = ""
+              [31m-[0m[0m destination_prefix_list_id = ""
+              [31m-[0m[0m egress_only_gateway_id     = ""
+              [31m-[0m[0m gateway_id                 = "igw-045ea3767b6f6b136"
+              [31m-[0m[0m instance_id                = ""
+              [31m-[0m[0m ipv6_cidr_block            = ""
+              [31m-[0m[0m local_gateway_id           = ""
+              [31m-[0m[0m nat_gateway_id             = ""
+              [31m-[0m[0m network_interface_id       = ""
+              [31m-[0m[0m transit_gateway_id         = ""
+              [31m-[0m[0m vpc_endpoint_id            = ""
+              [31m-[0m[0m vpc_peering_connection_id  = ""
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Name" = "route-public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Name" = "route-public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table_association.private[0][0m will be [1m[31mdestroyed[0m
+  # (because aws_route_table_association.private is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private" {
+      [31m-[0m[0m id             = "rtbassoc-0d578c73213c59097" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0e7f4d3c65b2a7004" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-03a783de1d21635c6" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table_association.private[1][0m will be [1m[31mdestroyed[0m
+  # (because aws_route_table_association.private is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private" {
+      [31m-[0m[0m id             = "rtbassoc-0ee31d436902dc090" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0e7f4d3c65b2a7004" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-08cf4046c8844fa9a" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table_association.public[0][0m will be [1m[31mdestroyed[0m
+  # (because aws_route_table_association.public is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-0bee5348fe39e72b6" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0c24f305fe5a293fe" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0723bace7afbc179f" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table_association.public[1][0m will be [1m[31mdestroyed[0m
+  # (because aws_route_table_association.public is not in configuration)
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-0e2da673e535766c4" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0c24f305fe5a293fe" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-01b0e5a3a749dd54f" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_subnet.private[0][0m will be [1m[31mdestroyed[0m
+  # (because aws_subnet.private is not in configuration)
+[0m  [31m-[0m[0m resource "aws_subnet" "private" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:341146379129:subnet/subnet-03a783de1d21635c6" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.11.0.0/20" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-03a783de1d21635c6" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Name" = "workshop-production-private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Name" = "workshop-production-private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_subnet.private[1][0m will be [1m[31mdestroyed[0m
+  # (because aws_subnet.private is not in configuration)
+[0m  [31m-[0m[0m resource "aws_subnet" "private" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:341146379129:subnet/subnet-08cf4046c8844fa9a" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az1" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.11.16.0/20" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-08cf4046c8844fa9a" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Name" = "workshop-production-private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Name" = "workshop-production-private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_subnet.public[0][0m will be [1m[31mdestroyed[0m
+  # (because aws_subnet.public is not in configuration)
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:341146379129:subnet/subnet-0723bace7afbc179f" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.11.32.0/20" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0723bace7afbc179f" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Name" = "workshop-production-public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Name" = "workshop-production-public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_subnet.public[1][0m will be [1m[31mdestroyed[0m
+  # (because aws_subnet.public is not in configuration)
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:341146379129:subnet/subnet-01b0e5a3a749dd54f" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az1" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.11.48.0/20" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-01b0e5a3a749dd54f" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Name" = "workshop-production-public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Name" = "workshop-production-public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_vpc.vpc[0m will be [1m[31mdestroyed[0m
+  # (because aws_vpc.vpc is not in configuration)
+[0m  [31m-[0m[0m resource "aws_vpc" "vpc" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:341146379129:vpc/vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.11.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-0a0c37e0d2562fce9" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-09fd34762e39b3713" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-0e739e10712d25979" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-040b2563aab915e6d" [90m-> null[0m[0m
+      [31m-[0m[0m enable_classiclink                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_classiclink_dns_support       = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-09fd34762e39b3713" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "341146379129" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Name" = "workshop-production-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Name" = "workshop-production-vpc"
+        } [90m-> null[0m[0m
+    }
+
+[1mPlan:[0m 18 to add, 0 to change, 17 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m admin_key_name  = "workshop-production" [90m-> null[0m[0m
+  [31m-[0m[0m azs             = "us-east-1a,us-east-1b" [90m-> null[0m[0m
+  [31m-[0m[0m environment     = "workshop-production" [90m-> null[0m[0m
+  [31m-[0m[0m private_subnets = [
+      [31m-[0m[0m "subnet-03a783de1d21635c6",
+      [31m-[0m[0m "subnet-08cf4046c8844fa9a",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m public_subnets  = [
+      [31m-[0m[0m "subnet-0723bace7afbc179f",
+      [31m-[0m[0m "subnet-01b0e5a3a749dd54f",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m vpc_cidr        = "10.11.0.0/16" [90m-> null[0m[0m
+  [31m-[0m[0m vpc_id          = "vpc-0256b8fc0b4201e04" [90m-> null[0m[0m
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
