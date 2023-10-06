@@ -29,7 +29,7 @@ resource "aws_subnet" "public" {
 }
 
 resource "aws_eip" "nat_eip" {
-  domain = "vpc"
+   
 }
 
 resource "aws_internet_gateway" "vpc" {
