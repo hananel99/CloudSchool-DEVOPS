@@ -15,9 +15,9 @@ output "main-instance_ssh_sg_id"{
 }
 
 output "cloudwatch_s3_profile_id"{
-        value = aws_iam_instance_profile.cloudwatch_s3_profile.id
+        value = aws_iam_instance_profile.cloudwatch_s3_profile_new.id
 }
 
 output "cloudwatch_s3_profile_name"{
-        value = aws_iam_instance_profile.cloudwatch_s3_profile.name
+        value = aws_iam_instance_profile.cloudwatch_s3_profile_new.name
 }

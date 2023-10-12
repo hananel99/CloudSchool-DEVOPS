@@ -19,6 +19,9 @@ export DATABASE_USERNAME=${database_username_terraform}
 export DATABASE_PASSWORD=${database_password_terraform}
 export VAULT_ADDR="http://$(curl http://169.254.169.254/latest/meta-data/local-ipv4):8200"
 
+docker pull vault:1.13.3
+docker pull hashicorp/consul:latest
+
 docker-compose -f ./CloudSchool-DEVOPS/DockerCompose/MainInstance/docker-compose.yml up --detach
 
 sleep 10

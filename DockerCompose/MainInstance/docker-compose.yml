@@ -49,7 +49,7 @@ services:
     command: "agent -bootstrap-expect=3"
 
   vault-server:
-    image: vault:latest
+    image: hashicorp/vault:latest
     container_name: vault-server
     ports:
       - "8200:8200"
@@ -79,8 +79,8 @@ services:
       - 3000:3000
     volumes:      
       - ~/grafana-data:/var/lib/grafana
-      - ./grafana/provisioning/:/etc/grafana/provisioning
-      - ./grafana/dashboards/:/var/lib/grafana/dashboards
+      - ~/CloudSchool-DEVOPS/DockerCompose/MainInstance/grafana/provisioning/:/etc/grafana/provisioning
+      - ~/CloudSchool-DEVOPS/DockerCompose/MainInstance/grafana/dashboards/:/var/lib/grafana/dashboards
     user: '0'
     networks:
       - consul

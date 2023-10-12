@@ -17,7 +17,7 @@ variable "instance_type" {
 
 variable "ami" {
   description = "ami id for workshop-app instances"
-  default = "ami-0a8e758f5e873d1c1"
+  default = "ami-053b0d53c279acc90"
 }
 
 variable "role" {
@@ -34,7 +34,7 @@ EOS
 }
 
 variable "site_module_state_path" {
-  default = "terraform-app/terraform.tfstate"
+  default = "terraform/terraform.tfstate"
   description = <<EOS
 S3 path to the remote state of the site module.
 The site module is a required dependency of this module

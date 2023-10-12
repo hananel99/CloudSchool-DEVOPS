@@ -16,7 +16,7 @@ resource "aws_instance" "main-server_lc" {
   ami = var.ami
   instance_type = var.instance_type
   key_name = data.terraform_remote_state.site.outputs.admin_key_name
-  iam_instance_profile = aws_iam_instance_profile.cloudwatch_s3_profile.name
+  iam_instance_profile = aws_iam_instance_profile.cloudwatch_s3_profile_new.name
   tags  ={
     Name = "Main-server"
     Source = "Terraform"
@@ -160,13 +160,13 @@ resource "aws_iam_role" "assume_role" {
   }
 }
 
-resource "aws_iam_instance_profile" "cloudwatch_s3_profile" {
-  name = "cloudwatch_s3_profile"
+resource "aws_iam_instance_profile" "cloudwatch_s3_profile_new" {
+  name = "cloudwatch_s3_profile_new"
   role = aws_iam_role.assume_role.name
 }
 
-resource "aws_iam_role_policy" "cloudwatch_s3_policy" {
-  name = "cloudwatch_s3_policy"
+resource "aws_iam_role_policy" "cloudwatch_s3_policy_new" {
+  name = "cloudwatch_s3_policy_new"
   role = aws_iam_role.assume_role.id
 
   policy = jsonencode(

@@ -30,7 +30,7 @@ resource "aws_autoscaling_group" "workshop-app_asg" {
   max_size = var.workshop-app_cluster_size_max
   min_size = var.workshop-app_cluster_size_min
   desired_capacity = var.workshop-app_cluster_size_min
-  vpc_zone_identifier = element(data.terraform_remote_state.site.outputs.public_subnets, 0)
+vpc_zone_identifier = [element(data.terraform_remote_state.site.outputs.public_subnets, 0)]
 
   load_balancers = [ aws_elb.workshop-app.name ]
 

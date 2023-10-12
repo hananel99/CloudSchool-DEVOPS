@@ -39,7 +39,7 @@ EOS
 }
 
 variable "site_module_state_path" {
-  default = "terraform-app/terraform.tfstate"
+  default = "terraform/terraform.tfstate"
   description = <<EOS
 S3 path to the remote state of the site module.
 The site module is a required dependency of this module

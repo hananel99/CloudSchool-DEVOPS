@@ -32,7 +32,10 @@ resource "aws_security_group" "rds-mysql-db" {
 
 resource "aws_db_subnet_group" "rds-db-default-group" {
   name       = "rds-db-default-group"
-    subnet_ids = concat(element(data.terraform_remote_state.site.outputs.private_subnets, 0), element(data.terraform_remote_state.site.outputs.public_subnets, 0))
+  subnet_ids = concat(
+  [element(data.terraform_remote_state.site.outputs.private_subnets, 0)],
+  [element(data.terraform_remote_state.site.outputs.public_subnets, 1)]
+)
 
   tags = {
     Name = "My DB subnet group"
