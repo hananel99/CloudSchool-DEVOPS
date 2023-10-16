@@ -8,3 +8,5 @@ Terraform/server-layer/modules/.terraform.lock.hcl
 Terraform/server-layer/modules/.terraform/terraform.tfstate
 Terraform/server-layer/modules/.terraform/modules/modules.json
 Terraform/server-layer/modules/.terraform/providers/registry.terraform.io/hashicorp/aws/5.0.1/linux_amd64/terraform-provider-aws_v5.0.1_x5
+Terraform/.vscode
+/.vscode
