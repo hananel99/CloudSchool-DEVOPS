@@ -35,7 +35,7 @@ directory "/home/bob/myapp" do
 end
 
 git "/home/bob/myapp" do
-  repository "git://github.com/hananel99/CloudSchool-py-app.git"
+  repository "https://github.com/hananel99/CloudSchool-py-app.git"
   revision "master"
   retries 3
   user 'bob'
