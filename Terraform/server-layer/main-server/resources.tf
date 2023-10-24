@@ -153,7 +153,7 @@ resource "aws_iam_role" "assume_role" {
       }
     ]
   }
-)
+  )
 
   tags = {
       Name = "assume_role"
