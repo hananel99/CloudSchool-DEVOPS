@@ -103,7 +103,7 @@ resource "aws_security_group" "workshop-app" {
 resource "aws_elb" "workshop-app" {
   name = "${var.cluster_name}-lb"
   listener {
-    instance_port = 8080
+    instance_port = 5000
     instance_protocol = "HTTP"
     lb_port = 80
     lb_protocol = "HTTP"

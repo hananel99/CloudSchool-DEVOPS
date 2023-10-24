@@ -22,10 +22,10 @@ export VAULT_ADDR="http://$(curl http://169.254.169.254/latest/meta-data/local-i
 docker pull vault:1.13.3
 docker pull hashicorp/consul:latest
 
-docker-compose -f ./CloudSchool-DEVOPS/DockerCompose/MainInstance/docker-compose.yml up --detach
+sudo docker-compose -f ./CloudSchool-DEVOPS/DockerCompose/MainInstance/docker-compose.yml up --detach
 
 sleep 10
 
-docker exec -i vault-server /bin/sh < ./CloudSchool-DEVOPS/DockerCompose/MainInstance/vault_init_database.sh
+sudo docker exec -i vault-server /bin/sh < ./CloudSchool-DEVOPS/DockerCompose/MainInstance/vault_init_database.sh
 
-docker exec -i consul-server1 /bin/sh < ./CloudSchool-DEVOPS/DockerCompose/MainInstance/consul_kv_init.sh
+sudo docker exec -i consul-server1 /bin/sh < ./CloudSchool-DEVOPS/DockerCompose/MainInstance/consul_kv_init.sh

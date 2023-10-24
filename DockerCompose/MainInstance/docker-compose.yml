@@ -78,7 +78,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ~/grafana-data:/var/lib/grafana
+      - /grafana-data:/var/lib/grafana
       - /CloudSchool-DEVOPS/DockerCompose/MainInstance/grafana/provisioning/:/etc/grafana/provisioning
       - /CloudSchool-DEVOPS/DockerCompose/MainInstance/grafana/dashboards/:/var/lib/grafana/dashboards
     user: '0'
