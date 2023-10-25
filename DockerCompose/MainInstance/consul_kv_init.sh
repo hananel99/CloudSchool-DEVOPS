@@ -1,3 +1,4 @@
+export VAULT_ADDR=http://localhost:8200
 consul kv put app/config/LOG_LEVEL "DEBUG"
 consul kv put app/config/END_POINT "free-to-play-games-database.p.rapidapi.com"
 consul kv put app/config/RAPID_API_KEY "fc010fb2aemshe9c83f856d3bae5p183940jsn675a512bbb3a"

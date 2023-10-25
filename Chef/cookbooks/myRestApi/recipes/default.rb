@@ -75,8 +75,8 @@ systemd_unit 'gunicorn.service' do
   },
   Service: {
     ExecStart: 'gunicorn --workers 1 --bind localhost:5000 app:app',
-    User: 'bob',
-    Group: 'www-data',
+    User: 'root',
+    Group: 'root',
     WorkingDirectory: '/home/bob/myapp',
     Restart: 'always'
   },
